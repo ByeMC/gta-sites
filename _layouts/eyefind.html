@@ -3,15 +3,24 @@
     <title>--- {{ page.title }} ---</title>
     <link href="assets/eyefind.css" rel="stylesheet" />
     <link href="assets/favicon.png" rel="icon" />
+    <script>
+        window.onresize = updateWindowDimension;
+        function updateWindowDimension() {
+            document.querySelector('hr.width').innerText = window.innerWidth;
+        }
+    </script>
+    updateWindowDimension();
     <meta name="description" content="The search engine that knows everything about you, mostly because it drives around in cars collecting all your private data. -- Recreation by ByeMC" />
 </head>
 <body>
     <div class="menu">
         <img src="assets/icon.png" alt="eyefind.info" width="163" height="69">
         <br />
+        <br />
         <form>
             <input spellcheck="false" data-ms-editor="true">
         </form>
+        <hr size="5" width="" color="#e7c121">
     </div>
 </body>
 </html>
