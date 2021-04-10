@@ -3,24 +3,24 @@
     <title>--- EYEFIND... It's like a series of tubes ---</title>
     <link href="assets/eyefind.css" rel="stylesheet" />
     <link href="assets/favicon.png" rel="icon" />
+    <meta name="description" content="The search engine that knows everything about you, mostly because it drives around in cars collecting all your private data. -- Recreation by ByeMC" />
     <script>
-        window.onresize = updateWindowDimension;
-        function updateWindowDimension() {
-            document.querySelector('hr.width').innerText = window.innerWidth;
+        function search() {
+            window.location.href = `search?q=${document.getElementById("searchtext").value}`
         }
     </script>
-    updateWindowDimension();
-    <meta name="description" content="The search engine that knows everything about you, mostly because it drives around in cars collecting all your private data. -- Recreation by ByeMC" />
 </head>
 <body>
     <div class="menu">
-        <img src="assets/icon.png" alt="eyefind.info" width="163" height="69">
-        <br />
-        <br />
-        <form>
-            <input spellcheck="false" data-ms-editor="true">
-        </form>
-        <hr size="5" width="" color="#e7c121">
+        <div class="menutext">
+            <img src="assets/icon.png" alt="eyefind.info" width="163" height="69">
+            <br />
+            <br />
+        </div>
+        <input type="text" id="searchtext" placeholder="Search Eyefind" title="searchtext">
+        <input type="button" name="search" value="Search" onclick="search()" />
+        <hr size="5" color="#e7c121">
     </div>
+    
 </body>
 </html>

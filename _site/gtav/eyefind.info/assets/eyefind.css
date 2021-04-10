@@ -4,5 +4,6 @@ div.menu {
 
 div.menutext {
     background-color: #4e8fb4;
-    padding-left: 35px
+    padding-left: 35px;
+    padding-top: 15px;
 }
