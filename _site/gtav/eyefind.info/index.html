@@ -7,20 +7,46 @@
     <script>
         function search() {
             window.location.href = `search?q=${document.getElementById("searchtext").value}`
+        };
+
+        function changePadding() {
+            var w = window.innerWidth / 8;
+            var padding = w * 6
+            if (document.getElementById("dropBox").value == "1") {
+                document.getElementById("paddingset").innerHTML = `div.menutext {
+background-color: #4e8fb4;
+padding-left: ` + padding + `;
+padding-top: 15px;
+}`
         }
     </script>
+    <style id="paddingset">
+        div.menutext {
+            background-color: #4e8fb4;
+            padding-left: 35px;
+            padding-top: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="menu">
         <div class="menutext">
-            <img src="assets/icon.png" alt="eyefind.info" width="163" height="69">
+            <a href="../eyefind.info"><img src="assets/icon.png" alt="eyefind.info" width="163" height="69"></a>
             <br />
-            <br />
+            <form onsubmit="search()">
+                <input type="text" placeholder="Search EyeFind" name="q">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
         </div>
-        <input type="text" id="searchtext" placeholder="Search Eyefind" title="searchtext">
-        <input type="button" name="search" value="Search" onclick="search()" />
-        <hr size="5" color="#e7c121">
+        <hr size="5" color="#e7c121" />
     </div>
-    
+    <div class="googleSearch">
+        <script async src="scripts/f.js"></script>
+        <div class="gcse-searchresults-only"></div>
+    </div>
+    <div class="search">
+
+    </div>
 </body>
 </html>
